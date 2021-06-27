@@ -1,0 +1,23 @@
+{
+    "type": "mssql",
+    "host": "192.168.0.105",
+    "port": 1433,
+    "username": "sucasas",
+    "password": "kotonoha??123",
+    "database": "library",
+    "entities": ["dist/shared/entity/**/**.entity{.ts,.js}"],
+    "extra": {
+        "validateConnection": false,
+        "trustServerCertificate": true
+    },
+    "migrations": [
+       "src/migration/**/*.ts"
+    ],
+    "subscribers": [
+       "src/subscriber/**/*.ts"
+    ],
+    "synchronize": true,
+    "cli":{
+       "migrationsDir":"./"
+    }
+}
